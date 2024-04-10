@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let user: User
+    
+    var posts: [Post]{
+        return Post.MOCK_POSTS.filter({$0.user?.username == user.username})
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    //  NavigationStack {
+        ScrollView{
+            //header
+            ProfileHeaderView(user: user)
+            // post grid view
+            ProfileGridView(posts: posts)
+            
+        }
+        .navigationTitle("Profile")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-#Preview {
-    ProfileView()
+struct ProfileView_Preview: PreviewProvider {
+    static var previews: some View{
+        ProfileView(user: User.MOCK_USRS[2])
+    }
 }
