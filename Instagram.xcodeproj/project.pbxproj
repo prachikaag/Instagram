@@ -47,6 +47,9 @@
 		258F91F42BC8569D00EC0E78 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91F32BC8569D00EC0E78 /* ImageUploader.swift */; };
 		258F91F72BC85CF400EC0E78 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 258F91F62BC85CF400EC0E78 /* Kingfisher */; };
 		258F91F92BC85D6E00EC0E78 /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91F82BC85D6E00EC0E78 /* CircularProfileImageView.swift */; };
+		258F91FF2BC89AC000EC0E78 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91FE2BC89AC000EC0E78 /* FeedViewModel.swift */; };
+		258F92012BC8A0E500EC0E78 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F92002BC8A0E500EC0E78 /* PostService.swift */; };
+		258F92052BC8A3C800EC0E78 /* ProfileGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F92042BC8A3C700EC0E78 /* ProfileGridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +88,9 @@
 		258F91F12BC7A25E00EC0E78 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		258F91F32BC8569D00EC0E78 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		258F91F82BC85D6E00EC0E78 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
+		258F91FE2BC89AC000EC0E78 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		258F92002BC8A0E500EC0E78 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		258F92042BC8A3C700EC0E78 /* ProfileGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,7 @@
 			children = (
 				258F91E72BC7915E00EC0E78 /* UserService.swift */,
 				258F91F32BC8569D00EC0E78 /* ImageUploader.swift */,
+				258F92002BC8A0E500EC0E78 /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -204,8 +211,8 @@
 		258F91A02BC7443100EC0E78 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				258F91B12BC7481800EC0E78 /* FeedView.swift */,
-				258F91B32BC7483900EC0E78 /* FeedCellView.swift */,
+				258F91FD2BC89AA200EC0E78 /* View */,
+				258F91FC2BC89A9B00EC0E78 /* ViewModel */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -257,9 +264,8 @@
 		258F91AE2BC7462000EC0E78 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				258F91AF2BC7463500EC0E78 /* UserStatView.swift */,
-				258F91BB2BC74C9A00EC0E78 /* IGTextfieldModifier.swift */,
-				258F91F82BC85D6E00EC0E78 /* CircularProfileImageView.swift */,
+				258F92032BC8A39900EC0E78 /* View */,
+				258F92022BC8A36100EC0E78 /* ViewModel */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -332,7 +338,6 @@
 				258F91ED2BC79D0A00EC0E78 /* EditProfileView.swift */,
 				258F91A82BC7457500EC0E78 /* ProfileView.swift */,
 				258F91AA2BC745AD00EC0E78 /* ProfileHeaderView.swift */,
-				258F91AC2BC745BE00EC0E78 /* ProfileGridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +364,42 @@
 				258F91CD2BC75AA300EC0E78 /* UploadPostsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		258F91FC2BC89A9B00EC0E78 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				258F91FE2BC89AC000EC0E78 /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		258F91FD2BC89AA200EC0E78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				258F91B12BC7481800EC0E78 /* FeedView.swift */,
+				258F91B32BC7483900EC0E78 /* FeedCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		258F92022BC8A36100EC0E78 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				258F92042BC8A3C700EC0E78 /* ProfileGridViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		258F92032BC8A39900EC0E78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				258F91F82BC85D6E00EC0E78 /* CircularProfileImageView.swift */,
+				258F91BB2BC74C9A00EC0E78 /* IGTextfieldModifier.swift */,
+				258F91AC2BC745BE00EC0E78 /* ProfileGridView.swift */,
+				258F91AF2BC7463500EC0E78 /* UserStatView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,8 +499,11 @@
 				258F91C62BC74FCE00EC0E78 /* User.swift in Sources */,
 				258F91AB2BC745AD00EC0E78 /* ProfileHeaderView.swift in Sources */,
 				258F91CC2BC75A6A00EC0E78 /* UploadPostsView.swift in Sources */,
+				258F91FF2BC89AC000EC0E78 /* FeedViewModel.swift in Sources */,
 				258F91E12BC7635000EC0E78 /* ContentViewModel.swift in Sources */,
+				258F92012BC8A0E500EC0E78 /* PostService.swift in Sources */,
 				258F91EE2BC79D0A00EC0E78 /* EditProfileView.swift in Sources */,
+				258F92052BC8A3C800EC0E78 /* ProfileGridViewModel.swift in Sources */,
 				258F91E62BC782F000EC0E78 /* LoginViewModel.swift in Sources */,
 				258F91F42BC8569D00EC0E78 /* ImageUploader.swift in Sources */,
 				258F91E42BC766C500EC0E78 /* RegistrationViewModel.swift in Sources */,
