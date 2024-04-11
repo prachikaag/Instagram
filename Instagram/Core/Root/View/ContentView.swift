@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var registrationViewModel = RegistrationViewModel()
+    @StateObject var viewmodel = ContentViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if viewmodel.userSession == nil {
+                LoginView()
+                    .environmentObject(registrationViewModel)
+            } else {
+                MainTabView()
+            }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Preview: PreviewProvider {
+    static var previews: some View{
+        ContentView()
+    }
 }

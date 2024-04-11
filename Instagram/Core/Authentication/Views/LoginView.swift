@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+//    @StateObject var registrationViewModel = RegistrationViewModel()
     var body: some View {
         NavigationStack{
             VStack{

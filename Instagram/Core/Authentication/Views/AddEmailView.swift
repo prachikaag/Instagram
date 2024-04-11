@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct AddEmailView: View {
-    @State private var email = ""
+//    @State private var email = ""
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewmodel: RegistrationViewModel
     var body: some View {
         VStack(spacing:12){
             VStack(spacing:3){
@@ -24,7 +25,7 @@ struct AddEmailView: View {
                     .padding(.horizontal,24)
             }
                     
-            TextField("Enter your email", text:$email)
+            TextField("Enter your email", text: $viewmodel.email)
                 .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                 .modifier(IGTextfieldModifier())
                 .padding(.top)
