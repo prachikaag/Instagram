@@ -9,17 +9,20 @@ import SwiftUI
 
 struct SearchView: View {
     @State private var searchtext  = ""
+    
+    @StateObject var viewmodel = SearchViewModel()
+    
     var body: some View {
         NavigationStack{
             ScrollView{
                 LazyVStack(spacing: 8){
-                    ForEach(User.MOCK_USRS) { user in
+                    ForEach(viewmodel.users) { user in
                         NavigationLink(value: user){
                             HStack {
-    //                               Image(user.profileImageUrl ?? "")
-                                Image(user.profileImageUrl ?? "")
+                                Image(systemName: "person.circle")
                                     .resizable()
                                     .scaledToFill()
+                                    .foregroundColor(.blue)
                                     .frame(width:40,height:40)
                                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                     
