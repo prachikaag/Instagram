@@ -10,9 +10,13 @@ import PhotosUI
 
 struct EditProfileView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var selectedImage: PhotosPickerItem?
-    @State private var fullname = ""
-    @State private var bio = ""
+
+    @StateObject var viewmodel: EditProfileViewModel
+    
+    init(user: User){
+        self._viewmodel = StateObject(wrappedValue: EditProfileViewModel(user: user))
+    }
+    
     var body: some View {
         VStack{
             //toolbar
@@ -30,7 +34,7 @@ struct EditProfileView: View {
                     Spacer()
                     
                     Button{
-                        print("Upate info")
+                        Task{ try await viewmodel.updateUserData() }
                     } label: {
                         Text("Done")
                             .font(.subheadline)
@@ -43,14 +47,23 @@ struct EditProfileView: View {
             }
             // edit profile pic
             
-            PhotosPicker(selection: $selectedImage){
+            PhotosPicker(selection: $viewmodel.selectedImage){
                 VStack{
-                    Image(systemName: "person")
-                        .resizable()
-                        .foregroundColor(.white)
-                        .background(.gray)
-                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                        .frame(width: 80, height: 80)
+                    if let image = viewmodel.profileImage{
+                        image
+                            .resizable()
+                            .foregroundColor(.white)
+                            .background(.gray)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            .frame(width: 80, height: 80)
+                    } else {
+                        Image(systemName: "person")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .background(.gray)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            .frame(width: 80, height: 80)
+                    }
                     
                     Text("Edit profile picture")
                         .font(.footnote)
@@ -64,8 +77,8 @@ struct EditProfileView: View {
             // name and bio 
             
             VStack{
-                EditProfileRowView(title: "Name", placeholder: "Enter your name", text: $fullname)
-                EditProfileRowView(title: "Bio", placeholder: "Enter your bio", text: $bio)
+                EditProfileRowView(title: "Name", placeholder: "Enter your name", text: $viewmodel.fullname)
+                EditProfileRowView(title: "Bio", placeholder: "Enter your bio", text: $viewmodel.bio)
             }
             
             Spacer()
@@ -94,6 +107,6 @@ struct EditProfileRowView: View{
 }
 struct EditProfileView_Preview: PreviewProvider {
     static var previews: some View{
-        EditProfileView()
+        EditProfileView(user: User.MOCK_USRS[2])
     }
 }
