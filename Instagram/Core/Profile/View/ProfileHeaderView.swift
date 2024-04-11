@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
-    let user:User
+    let user: User
     @State private var showEditProfile = false
     
     var body: some View {
@@ -16,11 +16,8 @@ struct ProfileHeaderView: View {
                 //Header View
                 HStack{
                     // pic and stats
-                    Image(user.profileImageUrl ?? "")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 100,height: 100)
-                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    CircularProfileImageView(user: user, size: .large)
+                    
                     Spacer()
                     
                     HStack{

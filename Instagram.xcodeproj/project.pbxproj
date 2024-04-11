@@ -45,6 +45,8 @@
 		258F91EE2BC79D0A00EC0E78 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91ED2BC79D0A00EC0E78 /* EditProfileView.swift */; };
 		258F91F22BC7A25E00EC0E78 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91F12BC7A25E00EC0E78 /* EditProfileViewModel.swift */; };
 		258F91F42BC8569D00EC0E78 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91F32BC8569D00EC0E78 /* ImageUploader.swift */; };
+		258F91F72BC85CF400EC0E78 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 258F91F62BC85CF400EC0E78 /* Kingfisher */; };
+		258F91F92BC85D6E00EC0E78 /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91F82BC85D6E00EC0E78 /* CircularProfileImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,7 @@
 		258F91ED2BC79D0A00EC0E78 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		258F91F12BC7A25E00EC0E78 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		258F91F32BC8569D00EC0E78 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		258F91F82BC85D6E00EC0E78 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258F91F72BC85CF400EC0E78 /* Kingfisher in Frameworks */,
 				258F91D52BC7606E00EC0E78 /* FirebaseDatabase in Frameworks */,
 				258F91D32BC7606E00EC0E78 /* FirebaseAuth in Frameworks */,
 				258F91D72BC7606E00EC0E78 /* FirebaseFirestore in Frameworks */,
@@ -227,8 +231,8 @@
 		258F91A32BC7444000EC0E78 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				258F91EA2BC792B700EC0E78 /* ViewModel */,
 				258F91E92BC7928B00EC0E78 /* View */,
+				258F91EA2BC792B700EC0E78 /* ViewModel */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -255,6 +259,7 @@
 			children = (
 				258F91AF2BC7463500EC0E78 /* UserStatView.swift */,
 				258F91BB2BC74C9A00EC0E78 /* IGTextfieldModifier.swift */,
+				258F91F82BC85D6E00EC0E78 /* CircularProfileImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				258F91D62BC7606E00EC0E78 /* FirebaseFirestore */,
 				258F91D82BC7606E00EC0E78 /* FirebaseFirestoreSwift */,
 				258F91DA2BC7606E00EC0E78 /* FirebaseStorage */,
+				258F91F62BC85CF400EC0E78 /* Kingfisher */,
 			);
 			productName = Instagram;
 			productReference = 258F91872BC743D900EC0E78 /* Instagram.app */;
@@ -393,6 +399,7 @@
 			mainGroup = 258F917E2BC743D900EC0E78;
 			packageReferences = (
 				258F91D12BC7606D00EC0E78 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				258F91F52BC85CF400EC0E78 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 258F91882BC743D900EC0E78 /* Products */;
 			projectDirPath = "";
@@ -448,6 +455,7 @@
 				258F91C22BC74EBA00EC0E78 /* CreatePasswordView.swift in Sources */,
 				258F91C42BC74F0B00EC0E78 /* CompleteSignUpView.swift in Sources */,
 				258F918B2BC743D900EC0E78 /* InstagramApp.swift in Sources */,
+				258F91F92BC85D6E00EC0E78 /* CircularProfileImageView.swift in Sources */,
 				258F91EC2BC792D200EC0E78 /* SearchViewModel.swift in Sources */,
 				258F91A72BC7449C00EC0E78 /* MainTabView.swift in Sources */,
 				258F91C82BC7518A00EC0E78 /* CurrentUserProfileView.swift in Sources */,
@@ -666,6 +674,14 @@
 				minimumVersion = 10.24.0;
 			};
 		};
+		258F91F52BC85CF400EC0E78 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -693,6 +709,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 258F91D12BC7606D00EC0E78 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		258F91F62BC85CF400EC0E78 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 258F91F52BC85CF400EC0E78 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
