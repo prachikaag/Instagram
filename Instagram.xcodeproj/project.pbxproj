@@ -42,6 +42,7 @@
 		258F91E62BC782F000EC0E78 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91E52BC782F000EC0E78 /* LoginViewModel.swift */; };
 		258F91E82BC7915E00EC0E78 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91E72BC7915E00EC0E78 /* UserService.swift */; };
 		258F91EC2BC792D200EC0E78 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91EB2BC792D200EC0E78 /* SearchViewModel.swift */; };
+		258F91EE2BC79D0A00EC0E78 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91ED2BC79D0A00EC0E78 /* EditProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		258F91E52BC782F000EC0E78 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		258F91E72BC7915E00EC0E78 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		258F91EB2BC792D200EC0E78 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		258F91ED2BC79D0A00EC0E78 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				258F91AA2BC745AD00EC0E78 /* ProfileHeaderView.swift */,
 				258F91AC2BC745BE00EC0E78 /* ProfileGridView.swift */,
 				258F91C72BC7518A00EC0E78 /* CurrentUserProfileView.swift */,
+				258F91ED2BC79D0A00EC0E78 /* EditProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				258F91AB2BC745AD00EC0E78 /* ProfileHeaderView.swift in Sources */,
 				258F91CC2BC75A6A00EC0E78 /* UploadPostsView.swift in Sources */,
 				258F91E12BC7635000EC0E78 /* ContentViewModel.swift in Sources */,
+				258F91EE2BC79D0A00EC0E78 /* EditProfileView.swift in Sources */,
 				258F91E62BC782F000EC0E78 /* LoginViewModel.swift in Sources */,
 				258F91E42BC766C500EC0E78 /* RegistrationViewModel.swift in Sources */,
 				258F91B42BC7483900EC0E78 /* FeedCellView.swift in Sources */,
