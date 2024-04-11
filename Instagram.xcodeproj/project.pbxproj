@@ -44,6 +44,7 @@
 		258F91EC2BC792D200EC0E78 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91EB2BC792D200EC0E78 /* SearchViewModel.swift */; };
 		258F91EE2BC79D0A00EC0E78 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91ED2BC79D0A00EC0E78 /* EditProfileView.swift */; };
 		258F91F22BC7A25E00EC0E78 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91F12BC7A25E00EC0E78 /* EditProfileViewModel.swift */; };
+		258F91F42BC8569D00EC0E78 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F91F32BC8569D00EC0E78 /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		258F91EB2BC792D200EC0E78 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		258F91ED2BC79D0A00EC0E78 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		258F91F12BC7A25E00EC0E78 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		258F91F32BC8569D00EC0E78 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				258F91E72BC7915E00EC0E78 /* UserService.swift */,
+				258F91F32BC8569D00EC0E78 /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				258F91E12BC7635000EC0E78 /* ContentViewModel.swift in Sources */,
 				258F91EE2BC79D0A00EC0E78 /* EditProfileView.swift in Sources */,
 				258F91E62BC782F000EC0E78 /* LoginViewModel.swift in Sources */,
+				258F91F42BC8569D00EC0E78 /* ImageUploader.swift in Sources */,
 				258F91E42BC766C500EC0E78 /* RegistrationViewModel.swift in Sources */,
 				258F91B42BC7483900EC0E78 /* FeedCellView.swift in Sources */,
 				258F91BC2BC74C9A00EC0E78 /* IGTextfieldModifier.swift in Sources */,
